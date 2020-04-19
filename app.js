@@ -79,46 +79,7 @@ app.get("/blogs/:id",function(req,res){
 	});
 });
 
-// //EDIT ROUTE
-// app.get("/blogs/:id/edit",function(req,res){
-// 	Blog.findById(req.params.id,function(error,foundBlog){
-// 		if(error){
-// 			res.redirect("/blogs");	
-// 		}
-// 		else{
-// 			res.render("edit",{blog: foundBlog});
-// 		}
-// 	});
-// });
 
-//UPDATE ROUTE
-// app.put("/blogs/:id",function(req,res){
-// 	req.body.blog.body = req.sanitize(req.body.blog.body);
-// 	 Blog.findByIdAndUpdate(req.params.id, req.body.blog, function(error,updatedBlog){
-// 		 if(error)
-// 			 {
-// 				 res.redirect("/blogs");
-// 			 }
-// 		 else
-// 			 {
-// 				 res.redirect("/blogs/" + req.params.id);
-// 			 }
-// 	 });
-// });
-
-// //DELETE ROUTE
-// app.delete("/blogs/:id", function(req,res){
-// 	Blog.findByIdAndRemove(req.params.id, function(error){
-// 		if(error)
-// 			{
-// 				res.redirect("/blogs");
-// 			}
-// 		else
-// 			{
-// 				res.redirect("/blogs");
-// 			}
-// 	})
-// })
 
 app.listen(3000,function(){
 	console.log("server is running!!!");
